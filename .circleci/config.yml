@@ -10,9 +10,9 @@ jobs:
       shell: powershell.exe
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - dotnet-packages-v1-{{ checksum "UWP_App2.csproj" }}
+      # - restore_cache:
+          # keys:
+            # - dotnet-packages-v1-{{ checksum "UWP_App2.csproj" }}
       - run:
           name: "Install project dependencies"
           command: dotnet.exe restore
