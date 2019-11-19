@@ -19,7 +19,7 @@ jobs:
       - save_cache:
           paths:
             - C:\Users\circleci\.nuget\packages
-          key: dotnet-packages-v1-{{ checksum "UWP_App2.csproj" }}
+          key: dotnet-packages-v1-{{ checksum "UWP_App2.sln" }}
       - run:
           name: "Run Build step"
           command: dotnet.exe publish -c Release -r win10-x64
